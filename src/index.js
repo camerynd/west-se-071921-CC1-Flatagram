@@ -32,7 +32,7 @@ function comments(userComments) {
         li.textContent = element.content
         fgComments.append(li)
     })
-    fgCommentForm.querySelector('button').addEventListener('click', event => {
+    fgCommentForm.addEventListener('submit', event => {
         event.preventDefault()
         addComment()
     })
