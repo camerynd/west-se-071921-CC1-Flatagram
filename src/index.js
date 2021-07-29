@@ -34,9 +34,13 @@ function comments(userComments) {
     })
     fgCommentForm.querySelector('button').addEventListener('click', event => {
         event.preventDefault()
-        const li = document.createElement("li")
-        li.textContent = inputBox.value
-        fgComments.append(li)
-        inputBox.value = ''
+        addComment()
     })
+}
+
+function addComment() {
+    const li = document.createElement("li")
+    li.textContent = inputBox.value
+    fgComments.append(li)
+    inputBox.value = ''
 }
